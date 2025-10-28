@@ -5,15 +5,7 @@
 }
 
 @font-face {
-  font-family: g;
-  src: url(../fonts/SIMPLIFICA\ Typeface.ttf);
-}
-@font-face {
-  font-family: a;
-  src: url(../fonts/BebasNeue-Regular.ttf);
-}
-@font-face {
-  font-family: b;
+  font-family: example-font;
   src: url(../fonts/LTMuseum-Black.ttf);
 }
 
@@ -23,7 +15,7 @@ body {
   /* Light text color for contrast */
   color: #edf2f7;
   /* A clean, modern font family */
-  font-family: g;
+  font-family:serif;
 
   /* --- Centering Magic --- */
   /* Use Flexbox to center our content */
