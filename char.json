@@ -1,0 +1,21 @@
+{
+  "name": [
+    "Methuselah"
+  ],
+  "race": {},
+  "background": {},
+  "class": {},
+  "subclasses": {},
+  "stats": {
+    "common": {
+      "lvl": 1
+    },
+    "combat": {
+      "hp": {
+        "max": 12,
+        "current": 12
+      }
+    }
+  },
+  "character_helper_version": 0.1
+}
