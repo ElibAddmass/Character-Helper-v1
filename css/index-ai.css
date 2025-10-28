@@ -9,13 +9,18 @@
   src: url(../fonts/LTMuseum-Black.ttf);
 }
 
+@font-face {
+  font-family: lin-r;
+  src: url(../fonts/LinLibertine_R.ttf);
+}
+
 body {
   /* A dark, slightly desaturated blue for the background */
   background-color: #1a202c;
   /* Light text color for contrast */
   color: #edf2f7;
-  /* A clean, modern font family */
-  font-family:serif;
+
+  font-family: lin-r;
 
   /* --- Centering Magic --- */
   /* Use Flexbox to center our content */
