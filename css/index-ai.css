@@ -4,13 +4,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: g;
+  src: url(../fonts/SIMPLIFICA/SIMPLIFICA/SIMPLIFICA\ Typeface.ttf);
+}
+@font-face {
+  font-family: a;
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: b;
+  src: url(../fonts/LTMuseum-Black.ttf);
+}
+
 body {
   /* A dark, slightly desaturated blue for the background */
   background-color: #1a202c;
   /* Light text color for contrast */
   color: #edf2f7;
   /* A clean, modern font family */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: g;
 
   /* --- Centering Magic --- */
   /* Use Flexbox to center our content */
@@ -26,19 +39,47 @@ body {
   /* Add some padding so content doesn't touch the edges */
 }
 
+/* USER --- define base font size --- */
+:root {
+  --base-font-size: 17px;
+  font-size: var(--base-font-size);
+}
+
+p {
+  font-size: var(--base-font-size);
+  line-height: calc(1rem * 1.5);
+}
+h6 {
+  font-size: 1.25rem;
+  line-height: calc(1rem * 1.45);
+}
+h5 {
+  font-size: 1.5625rem;
+  line-height: calc(1rem * 1.4);
+}
+h4 {
+  font-size: 1.95rem;
+  line-height: calc(1rem * 1.3);
+}
+h3 {
+  font-size: 2.4375rem;
+  line-height: calc(1rem * 1.2);
+}
+h2 {
+  font-size: 3.046875rem;
+  line-height: calc(1rem * 1.1);
+}
+h1 {
+  font-size: 3.80859375rem;
+  line-height: calc(1rem * 1.0);
+}
+
 /* --- Main Content Container --- */
 .helper-container {
   width: 100%;
   max-width: 1000px;
   /* The content won't get too wide on big screens */
   text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-  /* 2.5 times the base font size */
-  color: #e2e8f0;
-  margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -67,12 +108,12 @@ h1 {
   /* Card background color */
   background-color: #2d3748;
   border: 1px solid #4a5568;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   /* Rounded corners */
   padding: 2rem;
 
   /* Sizing */
-  width: 300px;
+  width: 400px;
   max-width: 100%;
 
   /* Text & Link Styling */
@@ -84,27 +125,28 @@ h1 {
 
   /* --- Interaction & Animation --- */
   /* This makes the hover effect smooth */
-  transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color ease-in-out 0.2s;
 }
 
 .option-card:hover {
   /* Slightly lift the card up */
   transform: translateY(-5px);
   /* Add a subtle "glow" effect */
-  border-color: #63b3ed;
+  border-color: #7383a0;
+  background-color: #313c4e;
+  
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.option-card h2 {
+.option-card h4 {
   margin-top: 0;
   color: #ffffff;
-  border-bottom: 2px solid #4a5568;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #4a5568;
 }
 
 .option-card p {
   color: #a0aec0;
   /* Lighter gray for the description text */
-  font-size: 0.9rem;
   line-height: 1.5;
 }
