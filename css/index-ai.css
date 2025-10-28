@@ -1,0 +1,110 @@
+/* --- Global Styles --- */
+* {
+  /* This makes layout math easier */
+  box-sizing: border-box;
+}
+
+body {
+  /* A dark, slightly desaturated blue for the background */
+  background-color: #1a202c;
+  /* Light text color for contrast */
+  color: #edf2f7;
+  /* A clean, modern font family */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* --- Centering Magic --- */
+  /* Use Flexbox to center our content */
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: top;
+  /* Center vertically */
+  min-height: 100vh;
+  /* Make the body at least the full height of the viewport */
+  margin: 0;
+  padding: 20px;
+  /* Add some padding so content doesn't touch the edges */
+}
+
+/* --- Main Content Container --- */
+.helper-container {
+  width: 100%;
+  max-width: 1000px;
+  /* The content won't get too wide on big screens */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  /* 2.5 times the base font size */
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  /* A lighter gray for the subtitle */
+  margin-top: 0;
+  margin-bottom: 3rem;
+  /* Add space before the cards */
+}
+
+/* --- The Option Cards --- */
+
+.options-container {
+  display: flex;
+  /* This is the key! It puts the cards side-by-side */
+  justify-content: center;
+  /* Center the cards within the container */
+  gap: 2rem;
+  /* Adds a nice 2rem space between the cards */
+  flex-wrap: wrap;
+  /* If the screen is too small, they will stack */
+}
+
+.option-card {
+  /* Card background color */
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 2rem;
+
+  /* Sizing */
+  width: 300px;
+  max-width: 100%;
+
+  /* Text & Link Styling */
+  color: #edf2f7;
+  /* Ensures text inside the link is light */
+  text-decoration: none;
+  /* Removes the default blue underline from links */
+  text-align: left;
+
+  /* --- Interaction & Animation --- */
+  /* This makes the hover effect smooth */
+  transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.option-card:hover {
+  /* Slightly lift the card up */
+  transform: translateY(-5px);
+  /* Add a subtle "glow" effect */
+  border-color: #63b3ed;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.option-card h2 {
+  margin-top: 0;
+  color: #ffffff;
+  border-bottom: 2px solid #4a5568;
+  padding-bottom: 0.5rem;
+}
+
+.option-card p {
+  color: #a0aec0;
+  /* Lighter gray for the description text */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
