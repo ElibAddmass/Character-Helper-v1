@@ -1,45 +1,53 @@
-/* --- Global Styles --- */
-* {
-  /* This makes layout math easier */
-  box-sizing: border-box;
-}
-
 @font-face {
-  font-family: example-font;
+  font-family: ltmuseum-med-r;
   src: url(../fonts/LTMuseum-Black.ttf);
 }
-
 @font-face {
   font-family: lin-r;
   src: url(../fonts/LinLibertine_R.ttf);
 }
-
-body {
-  /* A dark, slightly desaturated blue for the background */
-  background-color: #1a202c;
-  /* Light text color for contrast */
-  color: #edf2f7;
-
-  font-family: lin-r;
-
-  /* --- Centering Magic --- */
-  /* Use Flexbox to center our content */
-  display: flex;
-  justify-content: center;
-  /* Center horizontally */
-  align-items: top;
-  /* Center vertically */
-  min-height: 100vh;
-  /* Make the body at least the full height of the viewport */
-  margin: 0;
-  padding: 20px;
-  /* Add some padding so content doesn't touch the edges */
+@font-face {
+  font-family: lin-ri;
+  src: url(../fonts/LinuxLibertine/LinLibertine_RI.ttf);
 }
 
-/* USER --- define base font size --- */
+/* USER Note --- define base font size var, and color variables --- */
 :root {
+  /* font size for rem */
   --base-font-size: 17px;
   font-size: var(--base-font-size);
+  /* color palette */
+  --primary-color: #001d3d;
+  --secondary-color: #003566;
+  --tertiary-color: #0065c4;
+  --emphasis-color: #ffd60a;
+  --accent-color: #ffc300;
+  --background-color: #000814;
+}
+
+/* --- Global Styles --- */
+* {
+  font-family: lin-r;
+  color: var(--tertiary-color);
+  /* This makes layout math easier */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--emphasis-color);
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+i {
+  font-family: lin-ri;
+  font-style: normal;
+  color: inherit;
 }
 
 p {
@@ -74,18 +82,18 @@ h1 {
 /* --- Main Content Container --- */
 .helper-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   /* The content won't get too wide on big screens */
   text-align: center;
 }
 
+.title {
+  color: var(--accent-color);
+}
+
 .subtitle {
-  font-size: 1.2rem;
-  color: #a0aec0;
-  /* A lighter gray for the subtitle */
-  margin-top: 0;
+  color: var(--tertiary-color);
   margin-bottom: 3rem;
-  /* Add space before the cards */
 }
 
 /* --- The Option Cards --- */
@@ -102,48 +110,38 @@ h1 {
 }
 
 .option-card {
-  /* Card background color */
-  background-color: #2d3748;
-  border: 1px solid #4a5568;
+  color: var(--emphasis-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
-  /* Rounded corners */
   padding: 2rem;
 
   /* Sizing */
   width: 400px;
   max-width: 100%;
 
-  /* Text & Link Styling */
-  color: #edf2f7;
-  /* Ensures text inside the link is light */
-  text-decoration: none;
-  /* Removes the default blue underline from links */
   text-align: left;
-
-  /* --- Interaction & Animation --- */
-  /* This makes the hover effect smooth */
-  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color ease-in-out 0.2s;
 }
 
 .option-card:hover {
-  /* Slightly lift the card up */
-  transform: translateY(-5px);
-  /* Add a subtle "glow" effect */
-  border-color: #7383a0;
-  background-color: #313c4e;
-  
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  border-color:var(--emphasis-color);
+  cursor: pointer;
+}
+.option-card:active {
+  background-color: var(--secondary-color);
 }
 
 .option-card h4 {
-  margin-top: 0;
-  color: #ffffff;
+  color: var(--emphasis-color);
+  border-bottom-color: var(--secondary-color);
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
   padding-bottom: 1rem;
-  border-bottom: 0.2rem solid #4a5568;
+  margin-top: 0;
 }
 
 .option-card p {
-  color: #a0aec0;
+  color: var(--tertiary-color);
   /* Lighter gray for the description text */
   line-height: 1.5;
 }
