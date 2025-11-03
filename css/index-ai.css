@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: lin-r;
-  src: url(../fonts/LinLibertine_R.ttf);
+  src: url(../fonts/LinuxLibertine/LinLibertine_R.ttf);
 }
 @font-face {
   font-family: lin-ri;
@@ -17,9 +17,9 @@
   --base-font-size: 17px;
   font-size: var(--base-font-size);
   /* color palette */
-  --primary-color: #001d3d;
+  --primary-color: #0065c4;
   --secondary-color: #003566;
-  --tertiary-color: #0065c4;
+  --tertiary-color: #001d3d;
   --emphasis-color: #ffd60a;
   --accent-color: #ffc300;
   --background-color: #000814;
@@ -28,14 +28,14 @@
 /* --- Global Styles --- */
 * {
   font-family: lin-r;
-  color: var(--tertiary-color);
+  color: var(--primary-color);
   /* This makes layout math easier */
   box-sizing: border-box;
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--emphasis-color);
+  color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: top;
@@ -92,7 +92,7 @@ h1 {
 }
 
 .subtitle {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
   margin-bottom: 3rem;
 }
 
@@ -111,7 +111,7 @@ h1 {
 
 .option-card {
   color: var(--emphasis-color);
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
   border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -141,7 +141,7 @@ h1 {
 }
 
 .option-card p {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
   /* Lighter gray for the description text */
   line-height: 1.5;
 }
